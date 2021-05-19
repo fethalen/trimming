@@ -161,7 +161,6 @@ process trimming {
     flagsTrimming += " --paired --retain_unpaired"
   commandTrimming = "trim_galore $flagsTrimming $reads"
 
-  // TODO: Generate script log, redirect stdout and stderr to files
   """
   $commandTrimming
   echo "$commandTrimming" > 'trim_galore_command.txt'
